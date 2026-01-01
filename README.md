@@ -134,9 +134,8 @@ This project is open-sourced software licensed under the [MIT license](https://o
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+**Fauzan Al Rafi**
+- GitHub: [@fauzanalrafii](https://github.com/fauzanalrafii)
 
 ---
 
