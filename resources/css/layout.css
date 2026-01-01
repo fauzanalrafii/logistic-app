@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Overlay Gelap (Untuk Mobile) */
+.sidebar-overlay {
+    @apply fixed inset-0 z-20 bg-black opacity-50 transition-opacity;
+}
+
+/* 2. Container Utama Sidebar - Glassmorphism */
+.sidebar-container {
+    /* Visual Dasar */
+    @apply bg-slate-900 text-white w-64 flex flex-col shadow-2xl shrink-0;
+
+    /* Posisi & Animasi (Mobile First) */
+    @apply fixed inset-y-0 left-0 z-30 transform transition-transform duration-300;
+
+    /* Responsif Laptop (LG): Reset posisi jadi diam (Static) & Muncul */
+    @apply lg:translate-x-0 lg:static lg:inset-0;
+}
+
+/* Sidebar Glass Effect - Adaptive */
+.sidebar-glass {
+    @apply backdrop-blur-md transition-colors duration-300 shadow-sm;
+}
+
+/* 3. Header Sidebar (Logo Area) - SJ Zhang Style */
+.sidebar-header {
+    @apply h-auto flex flex-col items-center justify-center py-6 px-4 text-center;
+}
+
+/* 4. Logo Image */
+.sidebar-logo {
+    @apply h-16 w-16 p-1 mb-2 rounded-lg;
+}
+
+/* 5. Link Menu Item - Adaptive */
+.sidebar-link {
+    @apply flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-lg opacity-80 hover:opacity-100 hover:bg-slate-500/10 transition-all duration-200;
+}
+
+/* Section Label Style */
+.section-divider {
+    @apply mt-6 pt-4;
+}
+
+.section-label {
+    @apply block px-4 mb-3 text-[11px] font-medium tracking-wider text-slate-500 uppercase;
+}
+
+/* 6. Link Menu Item (Aktif) - Gradient Style */
+.sidebar-link-active {
+    @apply bg-gradient-to-r from-white/15 to-white/5 text-white opacity-100 font-medium border-l-[3px] border-blue-500 pl-3;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-400/30 rounded-full hover:bg-slate-400/50 transition-colors;
+}
+
+
+/* Section Label Style */
+.section-divider {
+    @apply mt-6 pt-4;
+}
+
+.section-label {
+    @apply block px-4 mb-3 text-[11px] font-medium tracking-wider text-slate-500 uppercase;
+}
+
+.sidebar-sublink-active {
+    @apply text-blue-500 font-medium opacity-100;
+}
+
+/* Menu Icon */
+.menu-icon {
+    @apply w-5 h-5 opacity-70 flex-shrink-0 transition-opacity duration-200;
+}
+
+.sidebar-link-active .menu-icon,
+.sidebar-link:hover .menu-icon {
+    @apply opacity-100;
+}
+
+/* Counter Badge */
+.menu-counter {
+    @apply text-xs text-slate-500 font-medium min-w-[20px] text-right;
+}
+
+.sidebar-link-active .menu-counter {
+    @apply text-slate-400;
+}
+
+/* Notification Badge */
+.menu-badge {
+    @apply inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full text-[11px] font-bold bg-rose-500 text-white;
+}
+
+.input-icon {
+    @apply border border-gray-300 rounded-md shadow-sm px-3 pr-9 pl-10 focus:ring-blue-500 focus:border-blue-500;
+}
